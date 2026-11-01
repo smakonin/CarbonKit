@@ -18,6 +18,7 @@ DATE='1 November 2026'
 DOI='https://doi.org/10.1145/3313294.3313385'
 REPO='https://github.com/smakonin/CarbonKit'
 STREAM='https://github.com/smakonin/StreamingCalc/tree/f75d50924d1cc621f40d3a80052e54983787b424'
+RIGHTS_DOI='https://doi.org/10.1109/IHTC.2014.7147535'
 
 # Blocks are the shared source for accessible web pages and the downloadable PDF.
 def p(s): return ('p',s)
@@ -180,6 +181,34 @@ review=[
 ]),
 ]
 
+rights=[
+('A Consumer Bill of Rights for Energy Conservation',[
+ p('Stephen Makonin, Laura Guzman Flores, Robyn Gill, Roger Alex Clapp, Lyn Bartram and Bob Gill (2014). A Consumer Bill of Rights for Energy Conservation. 2014 IEEE Canada International Humanitarian Technology Conference (IHTC), 6 pages. DOI: 10.1109/IHTC.2014.7147535.'),
+ p('The paper argues that useful energy information and opportunities to conserve should be available regardless of household income. It proposes consumer rights and discusses appliance-level feedback, local processing, informative displays and better appliance information. Its seven articles appear in Section V, pages 5-6. They are the authors\' research proposals.'),
+ table(['Proposed right','Meaning in the paper'],[
+ ('I - Access (p. 5)','Consumers should know appliance power demands and signatures, including average, peak and multiple-state consumption, through an informative display that does not depend on a computer or Internet access.'),
+ ('II - Privacy (pp. 5-6)','Detailed appliance-use or disaggregated information belongs solely to the consumer; aggregate usage is jointly owned by consumer and producer. The proposal conditions third-party distribution on anonymisation, aggregation and express written consumer consent.'),
+ ('III - Security (p. 6)','Smart-meter communications to the utility and devices in the home should use a secure network.'),
+ ('IV - Equality (p. 6)','Every consumer should have an equal opportunity to participate in energy conservation, whatever their socio-economic situation.'),
+ ('V - Comfort (p. 6)','Consumers should be able to use energy for basic comforts without shame or penalisation.'),
+ ('VI - Re-entry (p. 6)','Consumers should be able to re-enter conservation retrofitting programmes and complete improvements in stages as residences and budgets change.'),
+ ('VII - Maximization (p. 6)','Listing these rights should not deny or diminish other consumer rights. Maximization here does not mean maximising energy reduction.'),
+ ]),
+]),
+('Applying the ideas to CarbonKit',[
+ p('The following are proposed CarbonKit applications of the paper, not API requirements defined by its authors. The 2014 ownership language is a proposed policy position, not a claim about current law. Provider-held storage in CarbonKit describes custody; it does not by itself determine ownership or grant permission to share.'),
+ ul('Access and equality: review affordability, language, literacy, disability, connectivity and rental or mobility barriers before a pilot. Consider accessible, low-bandwidth, offline or assisted feedback; do not assume a household can buy new equipment or maintain a smartphone and Internet subscription.',
+ 'Privacy and security: favour local processing and minimum central information. The paper places disaggregation within the home network (p. 3). Document any sharing policy that differs from Article II rather than describing generic opt-in consent as equivalent to that article.',
+ 'Useful feedback: show data freshness and limitations, and test whether people understand which activity an estimate describes. The paper emphasises timely, conveniently placed information matched to consumption (p. 4).',
+ 'Comfort and re-entry: use voluntary goals and neutral language about essential energy needs. Support staged participation and rejoining as circumstances change, while respecting export and deletion choices.',
+ 'Open appliance information: the paper proposes public descriptions of appliance states, power demands and durations (pp. 4-5). Any future CarbonKit registry or adapter should preserve source and method provenance; no existing registry or certification programme is asserted here.'),
+ p('Alongside the 2019 CarbonKit platform proposal and the StreamingCalc integration candidate, this paper supplies a consumer-centred design reference. Its computational illustration and cited feedback studies do not validate a CarbonKit service or guarantee savings for future users. Its BC rates, programmes and policy examples are historical.'),
+ p('The supplied IEEE author manuscript is retained as a private project source. The public website links the publication DOI and credits all six authors rather than republishing the PDF.'),
+]),
+]
+standard[0][1].insert(2,p('A Consumer Bill of Rights for Energy Conservation (Makonin, Guzman Flores, Gill, Clapp, Bartram and Gill, 2014) is an additional informative design reference for access, privacy, security, equality, comfort and staged participation. Its proposed rights inform the discussion; this draft does not claim that they are enacted law or already implemented by CarbonKit.'))
+architecture[1][1].append(p('The 2014 Consumer Bill of Rights for Energy Conservation adds a consumer-centred design reference alongside StreamingCalc. Its proposals support affordable, understandable feedback, local processing, secure communications and conservation choices that respect essential comfort. Before a pilot, review access barriers and options for staged participation and re-entry. These are proposed CarbonKit applications of the paper, not an implemented service or a statement of current law. See the consumer-rights research note for all seven articles and the full citation.'))
+
 dns=[('Domain connection checklist',[
  p('Host: GitHub Pages for smakonin/CarbonKit, serving main at the repository root. Target custom domain: carbonkit.org. This checklist records intended DNS changes, not confirmation that they have been applied.'),
  p('Public DNS observed on '+DATE+': carbonkit.org A records 3.33.251.168 and 15.197.225.128; www CNAME carbonkit.org; nameservers ns41.domaincontrol.com and ns42.domaincontrol.com. No authenticated GoDaddy editing capability was available when this checklist was prepared.'),
@@ -217,6 +246,7 @@ def page(filename,title,desc,sections):
 page('standard.html','Working Standard v0.1','A proposed common language for activity, carbon estimates, consent and reproducibility.',standard)
 page('architecture.html','Architecture & rollout','A proposed path from open documentation to tested adapters and a consented pilot.',architecture)
 page('paper-review.html','Reading the 2019 proposal','What the workshop paper supports, what it leaves open, and how the working draft responds.',review)
+page('consumer-rights.html','Consumer rights & energy conservation','A research foundation for access, privacy, security and fair participation in CarbonKit.',rights)
 page('domain-setup.html','Connecting carbonkit.org','GitHub Pages and GoDaddy configuration notes for the project maintainer.',dns)
 
 # Core shapes: semantic conformance is deliberately specified in prose and tested separately.
@@ -276,8 +306,8 @@ def pdfblocks(bs):
 def footer(c,doc):
  c.setFont('TNR',8.5);c.setFillColor(colors.HexColor('#456153'));c.drawString(54,32,'CarbonKit | Proposal - Working draft v0.1 | '+DATE);c.drawRightString(558,32,str(doc.page))
  c.setStrokeColor(colors.HexColor('#c9cfc5'));c.line(54,45,558,45)
-story=[Spacer(1,65),para('CarbonKit','cover'),para('Working Standard v0.1','h1'),para('Architecture, rollout and workshop paper review','h2'),para('Proposal for discussion | '+DATE),Spacer(1,18),para('An open platform for personal carbon understanding. A shared language for tools, transparent methods and voluntary participation.'),Spacer(1,15),para('Research foundation: Laura Guzman, Stephen Makonin and Alex Clapp (2019), CarbonKit: Designing A Personal Carbon Tracking Platform. Fourth International Workshop on Social Sensing, Montreal. DOI: 10.1145/3313294.3313385.'),Spacer(1,10),para('This document develops new proposals from the paper. It does not report a production CarbonKit platform, a ratified standard or demonstrated behavioural, health or emissions benefits.'),Spacer(1,10),para('Project: '+REPO),para('Contact: Stephen Makonin, smakonin@sfu.ca'),Spacer(1,16),para('Contents: Working Standard (record model, calculation, corrections, consent and conformance); reference architecture; StreamingCalc candidate; staged rollout; volunteer roles; paper review; domain checklist.','small')]
-for label,sections in [('Working Standard v0.1',standard),('Architecture and rollout',architecture),('Workshop paper review',review),('Maintainer appendix',dns)]:
+story=[Spacer(1,65),para('CarbonKit','cover'),para('Working Standard v0.1','h1'),para('Architecture, rollout and research reviews','h2'),para('Proposal for discussion | '+DATE),Spacer(1,18),para('An open platform for personal carbon understanding. A shared language for tools, transparent methods and voluntary participation.'),Spacer(1,15),para('Research foundation: Laura Guzman, Stephen Makonin and Alex Clapp (2019), CarbonKit: Designing A Personal Carbon Tracking Platform. Fourth International Workshop on Social Sensing, Montreal. DOI: 10.1145/3313294.3313385.'),Spacer(1,10),para('This document develops new proposals from the paper. It does not report a production CarbonKit platform, a ratified standard or demonstrated behavioural, health or emissions benefits.'),Spacer(1,10),para('Project: '+REPO),para('Contact: Stephen Makonin, smakonin@sfu.ca'),Spacer(1,16),para('Contents: Working Standard (record model, calculation, corrections, consent and conformance); reference architecture; StreamingCalc candidate; staged rollout; volunteer roles; paper reviews, including the 2014 Consumer Bill of Rights; domain checklist.','small')]
+for label,sections in [('Working Standard v0.1',standard),('Architecture and rollout',architecture),('Workshop paper review',review),('Consumer rights research',rights),('Maintainer appendix',dns)]:
  for i,(title,bs) in enumerate(sections):
   story.append(PageBreak());story.append(para(label.upper(),'small'));story.append(para(title,'h1'));story.extend(pdfblocks(bs))
 doc=SimpleDocTemplate(str(SITE/'downloads'/'carbonkit-working-draft-v0.1.pdf'),pagesize=(612,792),leftMargin=54,rightMargin=54,topMargin=48,bottomMargin=61,title='CarbonKit Working Standard v0.1 - Proposal',author='CarbonKit project',subject='Proposed standard, architecture, rollout and paper review')
@@ -291,3 +321,11 @@ review_html=(SITE/'paper-review.html').read_text().replace('<h2>What the worksho
 (SITE/'paper-review.html').write_text(review_html)
 domain=(SITE/'domain-setup.html').read_text().replace('</section>', '<p>Official instructions: <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site">GitHub custom domains</a>, <a href="https://www.godaddy.com/help/edit-an-a-record-19239">GoDaddy A records</a>, <a href="https://www.godaddy.com/help/edit-a-cname-record-19237">GoDaddy CNAME records</a>.</p></section>')
 (SITE/'domain-setup.html').write_text(domain)
+
+rights_page=(SITE/'consumer-rights.html').read_text().replace('<h2>A Consumer Bill of Rights for Energy Conservation</h2>', '<h2>A Consumer Bill of Rights for Energy Conservation</h2><p><a href="'+RIGHTS_DOI+'">Read the original paper (DOI)</a></p>')
+(SITE/'consumer-rights.html').write_text(rights_page)
+for name in ['standard.html','architecture.html']:
+ text=(SITE/name).read_text()
+ text=text.replace('A Consumer Bill of Rights for Energy Conservation (Makonin', '<a href="consumer-rights.html">A Consumer Bill of Rights for Energy Conservation</a> (Makonin')
+ text=text.replace('See the consumer-rights research note for all seven articles and the full citation.', 'See the <a href="consumer-rights.html">consumer-rights research note</a> for all seven articles and the full citation.')
+ (SITE/name).write_text(text)

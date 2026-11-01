@@ -8,3 +8,5 @@
 
 /* CarbonKit leaf with a flowing S-shaped vein. */
 .brand-mark{background:transparent url("logo-mark.svg") center/contain no-repeat;border-radius:0;transform:none;width:34px;height:38px;margin-right:8px}.brand-mark:after{content:none}.site-footer .brand-mark{width:29px;height:32px}@media(max-width:600px){.brand-mark{width:32px;height:36px}}
+
+.related-research{border-top:1px solid var(--line);margin-top:32px;padding-top:26px}.related-research h3{font-size:25px;margin:0 0 17px}.related-research .related-authors{font-size:14px;color:var(--rust);line-height:1.6}.related-research p{overflow-wrap:anywhere}

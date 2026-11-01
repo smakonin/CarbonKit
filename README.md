@@ -19,6 +19,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - `standard.html`: proposed record model, methods, corrections, lifecycle and conformance criteria.
 - `architecture.html`: proposed components, StreamingCalc candidate, rollout gates and volunteer roles.
 - `paper-review.html`: evidence and limitations of the 2019 paper.
+- `consumer-rights.html`: seven proposed consumer rights from Makonin, Guzman Flores, Gill, Clapp, Bartram and Gill (2014), with proposed CarbonKit applications. [Paper DOI](https://doi.org/10.1109/IHTC.2014.7147535).
 - `downloads/carbonkit-working-draft-v0.1.pdf`: complete discussion draft, in embedded Times New Roman.
 - `schemas/0.1/`: draft electricity activity and estimate record shapes.
 - `examples/`: explicitly synthetic fixtures with an invented factor; never use it in a real inventory.
