@@ -1,0 +1,1 @@
+INVENTED factor fixture: 0.1 kgCO2e/kWh; EXAMPLE-ONLY; not for real inventories.

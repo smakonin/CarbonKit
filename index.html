@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CarbonKit is a proposed open platform for connecting personal carbon tracking tools. Explore the working standard, architecture and volunteer opportunities.">
+  <meta name="theme-color" content="#193d32">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <title>CarbonKit — Connecting tools. Understanding carbon.</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="CarbonKit home"><span class="brand-mark" aria-hidden="true"></span>CarbonKit<span class="brand-dot">.</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>Menu <span aria-hidden="true">+</span></button>
+      <nav id="site-nav" aria-label="Main navigation">
+        <a href="#idea">The idea</a><a href="#working-draft">Working draft</a><a href="#research">Research</a><a class="nav-join" href="#volunteer">Contribute <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Proposal · Working draft 0.1</p>
+        <h1 id="hero-title">A clearer picture.<br>A smaller footprint.</h1>
+        <p class="hero-intro">Our daily choices connect. Our carbon tools should, too.</p>
+        <p class="hero-description">CarbonKit proposes an open platform that brings personal carbon information together across services, helping people understand their activities and work towards goals they choose.</p>
+        <div class="actions"><a class="button" href="standard.html">Explore the working standard <span aria-hidden="true">↗</span></a><a class="text-link" href="#volunteer">Help shape CarbonKit <span aria-hidden="true">→</span></a></div>
+        <p class="hero-note">A project taking shape. This website does not collect or track your activities.</p>
+      </div>
+      <figure class="platform-figure">
+        <div class="figure-top"><span>Designed to connect</span><span class="figure-index">01 / CONCEPT</span></div>
+        <div class="orbit-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+          <div class="hub"><span class="hub-kicker">YOUR CHOICES</span><strong>CarbonKit</strong><span>One personal view</span></div>
+          <div class="satellite sat-one"><span>↗</span>Mobility</div>
+          <div class="satellite sat-two"><span>⌂</span>Home energy</div>
+          <div class="satellite sat-three"><span>≈</span>Everyday activities</div>
+          <span class="orbit-point point-one"></span><span class="orbit-point point-two"></span>
+        </div>
+        <figcaption>Proposed architecture: services retain raw data; a private personal view brings together only the information you choose to connect.</figcaption>
+        <div class="figure-bottom"><span class="tiny-dot"></span>Open interfaces <span class="tiny-dot"></span>User control <span class="tiny-dot"></span>Traceable estimates</div>
+      </figure>
+    </section>
+
+    <section id="idea" class="idea-section section" aria-labelledby="idea-title">
+      <div class="wrap two-column">
+        <div><p class="eyebrow">01 / The idea</p><h2 id="idea-title">More than a<br>carbon calculator.</h2></div>
+        <div class="idea-copy"><p class="large-copy">A shared language for the tools people already use.</p><p>The 2019 CarbonKit paper imagined a common API and dashboard connecting carbon tracking with health, savings, social participation and incentives. The aim is to make information easier to understand and act on, while keeping people in control of their data.</p><p>The next step is a small, testable foundation: interoperable records, transparent calculations and private personal views. Health, savings, social and reward features would be optional extensions.</p><a class="text-link" href="architecture.html">Read the proposed architecture <span aria-hidden="true">→</span></a></div>
+      </div>
+      <div class="wrap principles" aria-label="Proposed design principles">
+        <article><span class="principle-number">01</span><h3>Connect, with permission.</h3><p>Provider-held raw data stays with its provider. Connections and disclosures need clear, specific user consent.</p></article>
+        <article><span class="principle-number">02</span><h3>Show the method.</h3><p>Every estimate should carry its sources, units, factor version, boundaries and uncertainty. Missing data must stay visible.</p></article>
+        <article><span class="principle-number">03</span><h3>Keep the goal personal.</h3><p>Start with voluntary understanding and goals people choose. Reward points are distinct from carbon credits and offsets.</p></article>
+      </div>
+    </section>
+
+    <section class="feedback-section section wrap" aria-labelledby="feedback-title">
+      <div class="section-heading"><div><p class="eyebrow">A loop for learning</p><h2 id="feedback-title">Small steps. Useful feedback.</h2></div><p>The paper’s proposed feedback loop connects a person’s motivation with information and the next choice. Its effects remain to be evaluated.</p></div>
+      <ol class="feedback-loop">
+        <li><span>01</span><h3>Motivate</h3><p>Choose a reason and a goal.</p></li>
+        <li><span>02</span><h3>Track</h3><p>Connect relevant activities.</p></li>
+        <li><span>03</span><h3>Inform</h3><p>Understand estimates and gaps.</p></li>
+        <li><span>04</span><h3>Adjust</h3><p>Consider a practical change.</p></li>
+        <li><span>05</span><h3>Reward</h3><p>Recognise progress and reflect.</p></li>
+      </ol>
+    </section>
+
+    <section id="working-draft" class="draft-section section" aria-labelledby="draft-title">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow">02 / Build the foundation</p><h2 id="draft-title">An open working draft.</h2></div><p>These proposals turn the paper’s direction into decisions that can be discussed, implemented and tested. They are not a ratified standard or a running tracking service.</p></div>
+        <div class="document-grid">
+          <a class="document-card" href="standard.html"><span class="card-meta">PROPOSAL / v0.1 <span aria-hidden="true">↗</span></span><h3>Working<br>standard</h3><p>Activity and estimate records, calculation provenance, consent, corrections and portability.</p><span class="card-bottom">Read the specification <span aria-hidden="true">→</span></span></a>
+          <a class="document-card" href="architecture.html"><span class="card-meta">DESIGN / ROADMAP <span aria-hidden="true">↗</span></span><h3>Architecture<br>&amp; rollout</h3><p>Provider adapters, private user records, minimal coordination and staged acceptance criteria.</p><span class="card-bottom">Explore the plan <span aria-hidden="true">→</span></span></a>
+          <a class="document-card paper-card" href="paper-review.html"><span class="card-meta">RESEARCH / 2019 <span aria-hidden="true">↗</span></span><h3>From paper<br>to proposal</h3><p>What the workshop paper establishes, what remains untested and what the new draft adds.</p><span class="card-bottom">Read the paper review <span aria-hidden="true">→</span></span></a>
+        </div>
+        <div class="draft-download"><p><span class="small-label">TAKE IT WITH YOU</span>Review the working draft as a document.</p><a class="text-link" href="downloads/carbonkit-working-draft-v0.1.pdf">Download the draft PDF <span aria-hidden="true">↓</span></a></div>
+        <div class="integration-note"><span class="eyebrow">First integration candidate</span><div><h3>Learning from StreamingCalc.</h3><p><a href="https://github.com/smakonin/StreamingCalc">StreamingCalc</a> offers a concrete starting point for exploring streaming-related carbon estimates. Its current Numbers workbook would need a reviewed port or adapter before it could exchange CarbonKit records. No integration is implemented here.</p></div><a class="text-link" href="architecture.html#streamingcalc">See the proposed path <span aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <section id="research" class="research-section section wrap" aria-labelledby="research-title">
+      <div><p class="eyebrow">03 / Research roots</p><h2 id="research-title">An idea grounded<br>in a shared vision.</h2></div>
+      <div class="research-copy"><p class="large-copy">CarbonKit: Designing A Personal Carbon Tracking Platform</p><p class="authors">Laura Guzman · Stephen Makonin · Alex Clapp</p><p>Presented at the Fourth International Workshop on Social Sensing in Montreal in 2019, the paper sets out the CarbonKit concept, five connected modules and a privacy-conscious approach to platform design.</p><p>It is a proposal, rather than evidence of a deployed service or demonstrated changes in behaviour or health. Its British Columbia examples describe a historical design case, not current project partners.</p><a class="text-link" href="https://doi.org/10.1145/3313294.3313385">Read the original paper <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section id="volunteer" class="volunteer-section section" aria-labelledby="volunteer-title">
+      <div class="wrap volunteer-inner"><div class="volunteer-intro"><p class="eyebrow">04 / Call for volunteers</p><h2 id="volunteer-title">Help turn a shared idea<br>into useful tools.</h2><p>CarbonKit needs people who can question the assumptions, test the methods and build with care. Contributions can start with a focused review of the draft.</p><a class="button button-light" href="mailto:smakonin@sfu.ca?subject=CarbonKit%20volunteer&amp;body=Hello%20Stephen%2C%0A%0AI%27m%20interested%20in%20contributing%20to%20CarbonKit.%0A%0ARole%20or%20area%20of%20interest%3A%20%0ARelevant%20experience%20or%20perspective%3A%20%0AAvailability%3A%20%0A%0AThank%20you%2C%0A">Volunteer for CarbonKit <span aria-hidden="true">↗</span></a><p class="contact-note">Opens an email draft to <a href="mailto:smakonin@sfu.ca">smakonin@sfu.ca</a>. Nothing is sent by this website.</p></div><div class="volunteer-roles"><h3>Where you can contribute</h3><ul><li><strong>Standards</strong><span>Review records and interoperability.</span></li><li><strong>Carbon methods</strong><span>Examine factors, boundaries and uncertainty.</span></li><li><strong>Software</strong><span>Build adapters and reproducible tools.</span></li><li><strong>Accessibility</strong><span>Make information usable for more people.</span></li><li><strong>Privacy</strong><span>Test consent and data control.</span></li><li><strong>Community</strong><span>Listen, document and shape useful goals.</span></li></ul><a href="https://github.com/smakonin/CarbonKit">Explore the project on GitHub <span aria-hidden="true">↗</span></a></div></div>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><div><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>CarbonKit<span class="brand-dot">.</span></a><p>Connecting tools. Understanding carbon.</p></div><div class="footer-links"><a href="https://github.com/smakonin/CarbonKit">Source</a><a href="LICENSE">AGPL-3.0 license</a><a href="mailto:smakonin@sfu.ca">Contact</a></div><p class="footer-note">Working proposal · November 2026<br>No warranty. Open for discussion and contribution.</p></footer>
+</body>
+</html>

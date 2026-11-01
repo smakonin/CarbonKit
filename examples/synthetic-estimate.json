@@ -1,0 +1,56 @@
+{
+  "spec_version": "0.1",
+  "record_type": "estimate",
+  "id": "estimate-synthetic-001",
+  "subject_ref": "synthetic-user-a",
+  "provider_ref": "synthetic-provider",
+  "created_at": "2026-01-02T00:00:00Z",
+  "boundary": {
+    "description": "SYNTHETIC operational electricity fixture, not a user inventory",
+    "geography": "EXAMPLE-ONLY"
+  },
+  "consent_ref": "synthetic-consent-not-a-token",
+  "supersedes": null,
+  "activity_ids": [
+    "activity-synthetic-001"
+  ],
+  "kind": "inventory",
+  "amount": {
+    "value": 1,
+    "unit": "kgCO2e"
+  },
+  "factors": [
+    {
+      "id": "urn:carbonkit:synthetic:factor-001",
+      "version": "fixture-1",
+      "value": 0.1,
+      "unit": "kgCO2e/kWh",
+      "geography": "EXAMPLE-ONLY",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_to": "2027-01-01T00:00:00Z",
+      "source_uri": "urn:carbonkit:synthetic:factor-001",
+      "artifact_sha256": "c83ee74ce3da88148b61366037eca7dcdcb13f72ab36976d89fb992bd4f369cb",
+      "gas_coverage": "SYNTHETIC aggregate CO2e; no real gases assessed",
+      "gwp_basis": "SYNTHETIC; no scientific GWP assessment",
+      "synthetic": true
+    }
+  ],
+  "calculation": {
+    "method_id": "synthetic-electricity-multiply",
+    "version": "fixture-1",
+    "expression": "quantity_kWh * factor_kgCO2e_per_kWh",
+    "rounding": "No intermediate rounding; display to 3 decimals",
+    "input_canonicalization": "fixture-python-json-sort-compact-utf8-v1; ensure_ascii=False; allow_nan=False; no trailing newline; ASCII fixture only",
+    "input_scope": "Complete activity object examples/synthetic-activity.json, parsed as JSON",
+    "input_sha256": "ca4b55ad16d2aa9e579bf7f6d15ac2308a2902a6b5c88dee1a6da0b65d1b9d08"
+  },
+  "uncertainty": {
+    "status": "unknown",
+    "lower": null,
+    "upper": null,
+    "rationale": "Invented fixture; no empirical uncertainty assessed."
+  },
+  "limitations": [
+    "SYNTHETIC EXAMPLE ONLY. Factor is invented and not valid for real inventories."
+  ]
+}
