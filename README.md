@@ -50,4 +50,6 @@ Proposed review process: describe rationale, compatibility and method/privacy im
 
 ## License and sources
 
+Draft documentation: Copyright © 2026 Stephen Makonin.
+
 The repository's original **GNU Affero General Public License version 3** is preserved in `LICENSE`. No warranty. The 2019 ACM paper remains separately copyrighted; the website links its DOI rather than republishing it. StreamingCalc's MIT software notice and requested research citation must accompany any future port; its paper and reference documents retain their own terms.

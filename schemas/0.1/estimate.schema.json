@@ -1,5 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "Copyright \u00a9 2026 Stephen Makonin. Draft schema.",
   "$id": "https://carbonkit.org/schemas/0.1/estimate.schema.json",
   "title": "CarbonKit estimate record - proposal 0.1",
   "type": "object",
