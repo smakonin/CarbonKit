@@ -1,4 +1,5 @@
 from pathlib import Path
+from logo_mark import LogoMark
 import json, html, hashlib
 from reportlab.pdfgen import canvas
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, KeepTogether
@@ -308,7 +309,11 @@ def footer(c,doc):
  c.setFont('TNR',8.5);c.setFillColor(colors.HexColor('#456153'));c.drawString(54,33,'CarbonKit | Proposal - Working draft v0.1 | '+DATE);c.drawRightString(558,33,str(doc.page))
  c.setFont('TNR',8);c.drawString(54,21,COPYRIGHT)
  c.setStrokeColor(colors.HexColor('#c9cfc5'));c.line(54,45,558,45)
-story=[Spacer(1,65),para('CarbonKit','cover'),para('Working Standard v0.1','h1'),para('Architecture, rollout and research reviews','h2'),para('Proposal for discussion | '+DATE),para(COPYRIGHT,'small'),Spacer(1,18),para('An open platform for personal carbon understanding. A shared language for tools, transparent methods and voluntary participation.'),Spacer(1,15),para('Research foundation: Laura Guzman, Stephen Makonin and Alex Clapp (2019), CarbonKit: Designing A Personal Carbon Tracking Platform. Fourth International Workshop on Social Sensing, Montreal. DOI: 10.1145/3313294.3313385.'),Spacer(1,10),para('This document develops new proposals from the paper. It does not report a production CarbonKit platform, a ratified standard or demonstrated behavioural, health or emissions benefits.'),Spacer(1,10),para('Project: '+REPO),para('Contact: Stephen Makonin, smakonin@sfu.ca'),Spacer(1,16),para('Contents: Working Standard (record model, calculation, corrections, consent and conformance); reference architecture; StreamingCalc candidate; staged rollout; volunteer roles; paper reviews, including the 2014 Consumer Bill of Rights; domain checklist.','small')]
+cover_wordmark = Paragraph('CarbonKit', ParagraphStyle('wordmark', parent=styles['cover'], spaceAfter=0))
+cover_logo = LogoMark(SITE/'assets'/'logo-mark.svg', width=72)
+cover_brand = Table([[cover_logo, cover_wordmark]], colWidths=[88,416], rowHeights=[cover_logo.height], hAlign='LEFT')
+cover_brand.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'MIDDLE'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),0),('TOPPADDING',(0,0),(-1,-1),0),('BOTTOMPADDING',(0,0),(-1,-1),0)]))
+story=[Spacer(1,65),cover_brand,Spacer(1,20),para('Working Standard v0.1','h1'),para('Architecture, rollout and research reviews','h2'),para('Proposal for discussion | '+DATE),para(COPYRIGHT,'small'),Spacer(1,18),para('An open platform for personal carbon understanding. A shared language for tools, transparent methods and voluntary participation.'),Spacer(1,15),para('Research foundation: Laura Guzman, Stephen Makonin and Alex Clapp (2019), CarbonKit: Designing A Personal Carbon Tracking Platform. Fourth International Workshop on Social Sensing, Montreal. DOI: 10.1145/3313294.3313385.'),Spacer(1,10),para('This document develops new proposals from the paper. It does not report a production CarbonKit platform, a ratified standard or demonstrated behavioural, health or emissions benefits.'),Spacer(1,10),para('Project: '+REPO),para('Contact: Stephen Makonin, smakonin@sfu.ca'),Spacer(1,16),para('Contents: Working Standard (record model, calculation, corrections, consent and conformance); reference architecture; StreamingCalc candidate; staged rollout; volunteer roles; paper reviews, including the 2014 Consumer Bill of Rights; domain checklist.','small')]
 for label,sections in [('Working Standard v0.1',standard),('Architecture and rollout',architecture),('Workshop paper review',review),('Consumer rights research',rights),('Maintainer appendix',dns)]:
  for i,(title,bs) in enumerate(sections):
   story.append(PageBreak());story.append(para(label.upper(),'small'));story.append(para(title,'h1'));story.extend(pdfblocks(bs))

@@ -40,7 +40,7 @@ Checks cover local links/anchors, schema validity, fixture arithmetic and artifa
 
 ## Rebuild documents
 
-The generated HTML, schemas, examples and PDF share `tools/build_documents.py` as their content source. Install `requirements-authoring.txt` and run it from the repository. PDF authoring currently expects macOS Times New Roman fonts under `/System/Library/Fonts/Supplemental/`; it embeds them in the output. The HTML pages provide a more accessible reading alternative to the untagged PDF.
+The generated HTML, schemas, examples and PDF share `tools/build_documents.py` as their content source. Install `requirements-authoring.txt` and run it from the repository. PDF authoring currently expects macOS Times New Roman fonts under `/System/Library/Fonts/Supplemental/`; it embeds them in the output. The HTML pages provide a more accessible reading alternative to the untagged PDF. The cover uses the final logo in `assets/logo-mark.svg`, rendered as vector paths by `tools/logo_mark.py`.
 
 ## Contribute
 
