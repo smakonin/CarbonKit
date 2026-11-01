@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="10 4 146 150" role="img" aria-labelledby="title desc">
   <metadata>Copyright © 2026 Stephen Makonin. CarbonKit logo.</metadata>
   <title id="title">CarbonKit two-leaf logo</title>
-  <desc id="desc">A compact pair of leaves on a shared stem: a rounded, slender C vein for Carbon and a curved K vein for Kit.</desc>
+  <desc id="desc">A compact pair of leaves on a shared stem: an elongated, rounded C vein for Carbon and a curved K vein for Kit.</desc>
   <g id="plant" fill="#193d32">
     <path id="stem" d="M45 146C49 128 51 119 61 111M49.48 128.208C47.8 120.8 46.7 115.7 46 110" fill="none" stroke="#193d32" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
     <path id="carbon-leaf" d="M46 112C13 85 20 37 67 13C81 55 71 94 46 112Z"/>
     <path id="kit-leaf" d="M60 113C66 80 99 47 150 45C146 92 110 122 60 113Z"/>
   </g>
   <g id="letter-veins" fill="none" stroke="#f6f4eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <path id="c-vein" d="M59 38C43 31 28 78 49 85"/>
+    <path id="c-vein" d="M61 32C42 28 26 83 47 93"/>
     <path id="k-spine" d="M78 101C88 76 107 91 128 65"/>
     <path id="k-branches" d="M100.375 83.375C107 88 114 89 123 87M100.375 83.375C104 90 105 98 102 105"/>
   </g>
